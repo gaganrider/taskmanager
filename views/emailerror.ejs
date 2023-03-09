@@ -1,0 +1,13 @@
+<%- include('header')%>
+<div class="create">
+  <h2>Create User</h2>
+    <form action="/create" method="post" class="createform">
+        <input type="text" name="name" placeholder="Name" value="<%=ename%>">
+        <input type="email" name="email" placeholder="Example@email.com" value="<%=eemail%>">
+        <p class="error"> <%=email%></p>
+        <input type="number" name="phone" placeholder="Enter phone number" value="<%=ephone%>">
+        <p class="error"><%=phone%></p>
+        <button>create</button>
+    </form>
+</div>   
+<%- include('footer')%>

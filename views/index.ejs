@@ -1,0 +1,36 @@
+    <%- include('header')%>
+    <h1 class="heading">Task Manager</h1>
+    <div class="home">
+      
+      <div class="homel">
+        <h2>Users</h2>
+        <ol>
+        <% data.forEach((user)=>{%>
+          <li><a href="/user/<%= user._id%>" ><%= user.name%></a></li>
+           <%})%> 
+          </ol>
+      </div>
+      <div class="homer">
+        <h2>Create New User</h2>
+        <form action="/" method="post" class="createform">
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="email" placeholder="Example@email.com">
+            <input type="tel" name="phone" placeholder="Enter phone number" minlength="10" maxlength="10">
+            <button>create</button>
+        </form>
+      </div>
+
+
+
+
+    </div>   
+    <!-- <div class="table">
+     <div class="tablediv"><div class="left tablehead">User</div><div class="right tablehead">Task</div></div> 
+     <div class="tablediv"><div class="left">gagan</div><div class="right">gagan ka Task</div></div>
+     
+     
+     <% data.forEach((user)=>{%>
+      <div class="tablediv"><div class="left"><%= user.name%></div><div class="right"><%= user.taskName%></div></div>
+       <%})%>
+    </div> -->
+    <%- include('footer')%>

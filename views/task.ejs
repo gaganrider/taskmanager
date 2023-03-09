@@ -1,0 +1,19 @@
+<%- include('header')%>
+<div class="task">
+    <h2>Assign Task</h2>
+  <form action="/task" method="post" class="taskform">
+    <h3>Select User</h3>
+    <select name="name">
+        <% data.forEach((user)=>{%>
+            <option value="<%= user.name%>"><%= user.name%></option>
+             <%})%>
+      </select>
+      <input type="text" name="task" placeholder="Task Name">
+      <h4>Pending Status</h4>
+      <input type="radio"  value="Pending" name="status" id="false" ><label for="false">Pending</label>
+      <input  type="radio"  value="Done" name="status" id="true" ><label for="true">Done</label>
+      <br><br>
+      <button>Submit</button>
+  </form>
+</div>   
+<%- include('footer')%>

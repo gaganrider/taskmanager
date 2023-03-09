@@ -1,0 +1,13 @@
+<%- include('header')%>
+<div class="user">
+  <h2 class="heading"><%= user.name%></h2>
+  <h3>Tasks</h3>  
+  <ul>
+  <% task.forEach((data)=>{%>
+    <li><h4><%= data.task%></h4><p>Status:<%= data.status%></p></li>
+    <%})%> 
+    </ul> 
+
+       
+</div>   
+<%- include('footer')%>
